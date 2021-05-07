@@ -22,9 +22,9 @@ export const Input = styled.TextInput`
 
 export const BackgrounLogin = styled.ImageBackground`
   width: 100%;
-  height: 500px;
+  height: 700px;
   border-top-left-radius: 30px;
-  margin-bottom: ${426-500}px;
+  margin-bottom: ${426-600}px;
 
   align-items: center;
   justify-content: center;

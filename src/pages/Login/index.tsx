@@ -23,9 +23,17 @@ const Login: React.FC = () => {
 
       <BackgrounLogin source={LoginContainer}>
         
-        <Input />
+        <Input
+          name="usuario"
+          tipo="numero"
+          placeholder="Digite seu usuário"
+        />
 
-        <Input />
+        <Input
+          name="senha"
+          tipo="senha"
+          placeholder="Digite sua senha"
+        />
 
         <ButtonEntrar>
           <ButtonEntrarTexto>Entrar</ButtonEntrarTexto>
