@@ -1,14 +1,17 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { KeyboardType, KeyboardTypeOptions, TextInputProps } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { KeyboardTypeOptions, TextInputProps } from 'react-native';
 
-import { Container, Icon, InputTexto } from './styles';
+import { Container, Icon, InputText } from './styles';
+
 interface IInputProps extends TextInputProps {
   name: string;
+  placeholder: string;
+  icone?: string;
   hasError?: boolean;
   tipo: "senha" | "texto" | "email" | "numero";
 }
 
-const Input: React.FC<IInputProps> = ({ tipo, ...rest }) => {
+const Input: React.FC<IInputProps> = ({ name, icone, hasError, tipo, placeholder, ...rest }) => {
   const [tipoTeclado, setTipoTeclado] = useState<KeyboardTypeOptions>();
 
   useEffect(() => {
@@ -24,11 +27,14 @@ const Input: React.FC<IInputProps> = ({ tipo, ...rest }) => {
 
   return (
     <Container>
-      <Icon name="lock" size={24} color="#0B75D7" />
-      <InputTexto
+      {icone && 
+        <Icon name={icone} size={24} color="#0B75D7" />
+      }
+      <InputText
         keyboardType={tipoTeclado}
         secureTextEntry={tipo === "senha" ? true : false }
-        {...rest} 
+        placeholder={placeholder}
+        { ...rest }
       />
     </Container>
   );

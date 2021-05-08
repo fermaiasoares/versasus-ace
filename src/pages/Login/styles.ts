@@ -7,7 +7,6 @@ export const Container = styled.View`
   background-color: #f1f1f1;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  elevation: 4;
 `;
 
 export const ImageBackground = styled.ImageBackground`
@@ -21,18 +20,10 @@ export const Input = styled.TextInput`
 `
 
 export const BackgrounLogin = styled.ImageBackground`
-<<<<<<< Updated upstream
-  width: 100%;
-  height: 700px;
-  border-top-left-radius: 30px;
-  margin-bottom: ${426-600}px;
-
-=======
   width: 416px;
   height: 466px;
   border-top-left-radius: 30px;
   margin-bottom: ${426-466}px;
->>>>>>> Stashed changes
   align-items: center;
   justify-content: center;
 `;
