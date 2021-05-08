@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, View } from 'react-native';
+import { View } from 'react-native';
 
 import { BackgrounLogin, ButtonEntrar, ButtonEntrarTexto, ImageBackground } from './styles';
 
@@ -35,11 +35,11 @@ const Login: React.FC = () => {
           placeholder="Digite sua senha"
         />
 
-        <ButtonEntrar>
-          <ButtonEntrarTexto>Entrar</ButtonEntrarTexto>
-        </ButtonEntrar>
-        <VersaTec />
-      </BackgrounLogin>
+          <ButtonEntrar>
+            <ButtonEntrarTexto>Entrar</ButtonEntrarTexto>
+          </ButtonEntrar>
+          <VersaTec />
+        </BackgrounLogin>
     </ImageBackground>
   );
 }
