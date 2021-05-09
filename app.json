@@ -43,7 +43,8 @@
         "json",
         "wasm",
         "svg"
-      ]
+      ],
+      "transformer": "node_modules/react-native-typescript-transformer/index.js"
     }
   }
 }

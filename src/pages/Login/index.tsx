@@ -1,14 +1,15 @@
 import React from 'react';
 import { View } from 'react-native';
-
-import { BackgrounLogin, ButtonEntrar, ButtonEntrarTexto, ImageBackground } from './styles';
-
 import Logo from '../../assets/logo.svg';
 import VersaTec from '../../assets/versatec.svg';
 import Input from '../../components/Input';
-const LoginContainer = require('../../assets/login-background.png');
+import { BackgrounLogin, ButtonEntrar, ButtonEntrarTexto, ImageBackground } from './styles';
+
+
 
 const Login: React.FC = () => {
+  
+  const LoginContainer = require('../../assets/login-background.png');
   const background = require('../../assets/background.png');
   
   return (
@@ -25,7 +26,7 @@ const Login: React.FC = () => {
         
         <Input
           name="usuario"
-          tipo="numero"
+          tipo="texto"
           placeholder="Digite seu usuário"
         />
 

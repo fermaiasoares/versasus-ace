@@ -1,30 +1,30 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js add @expo/vector-icons/Feather
+  /usr/local/bin/node /usr/local/bin/yarn add -D @babel/transform-react-jsx-source
 
 PATH: 
-  /home/fermaiasoares/.zinit/polaris/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/fermaiasoares/Android/Sdk/emulator:/home/fermaiasoares/Android/Sdk/tools:/home/fermaiasoares/Android/Sdk/tools/bin:/home/fermaiasoares/Android/Sdk/platform-tools:/home/fermaiasoares/android-studio/bin:/opt/gradle/gradle-7.0/bin:/home/fermaiasoares/Android/Sdk/emulator:/home/fermaiasoares/Android/Sdk/tools:/home/fermaiasoares/Android/Sdk/tools/bin:/home/fermaiasoares/Android/Sdk/platform-tools:/home/fermaiasoares/android-studio/bin:/opt/gradle/gradle-7.0/bin:/home/fermaiasoares/Android/Sdk/emulator:/home/fermaiasoares/Android/Sdk/tools:/home/fermaiasoares/Android/Sdk/tools/bin:/home/fermaiasoares/Android/Sdk/platform-tools:/home/fermaiasoares/android-studio/bin:/opt/gradle/gradle-7.0/bin
+  /usr/local/opt/ruby/bin:/Users/usuario/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/usuario/.zinit/polaris/bin:/usr/local/opt/ruby/bin:/Users/usuario/bin:/Users/usuario/Library/Android/sdk/emulator:/Users/usuario/Library/Android/sdk/tools:/Users/usuario/Library/Android/sdk/tools/bin:/Users/usuario/Library/Android/sdk/platform-tools:/opt/gradle/gradle-7.0/bin:/Users/usuario/Library/Android/sdk/emulator:/Users/usuario/Library/Android/sdk/tools:/Users/usuario/Library/Android/sdk/tools/bin:/Users/usuario/Library/Android/sdk/platform-tools:/opt/gradle/gradle-7.0/bin
 
 Yarn version: 
-  1.22.5
+  1.22.10
 
 Node version: 
-  12.22.1
+  14.16.0
 
 Platform: 
-  linux x64
+  darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@expo%2fvector-icons/Feather: Request "https://registry.yarnpkg.com/@expo%2fvector-icons/Feather" returned a 405
-      at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66997:18)
-      at Request.self.callback (/usr/share/yarn/lib/cli.js:140749:22)
-      at Request.emit (events.js:314:20)
-      at Request.<anonymous> (/usr/share/yarn/lib/cli.js:141721:10)
-      at Request.emit (events.js:314:20)
-      at IncomingMessage.<anonymous> (/usr/share/yarn/lib/cli.js:141643:12)
-      at Object.onceWrapper (events.js:420:28)
-      at IncomingMessage.emit (events.js:326:22)
-      at endReadableNT (_stream_readable.js:1241:12)
-      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+  Error: https://registry.yarnpkg.com/@babel%2ftransform-react-jsx-source: Not found
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66988:18)
+      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140662:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141634:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141556:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
 
 npm manifest: 
   {
@@ -39,6 +39,7 @@ npm manifest:
     "dependencies": {
       "@expo-google-fonts/dm-sans": "^0.1.0",
       "@expo/metro-config": "^0.1.64",
+      "@expo/vector-icons": "^12.0.0",
       "@react-native-community/art": "^1.2.0",
       "date-fns": "^2.21.2",
       "expo": "~41.0.1",
@@ -50,10 +51,13 @@ npm manifest:
       "react-native-neomorph-shadows": "^1.1.2",
       "react-native-shadow": "^1.2.2",
       "react-native-shadow-view": "^0.0.1",
+      "react-native-sqlite-storage": "^5.0.0",
       "react-native-svg": "12.1.0",
       "react-native-svg-transformer": "^0.14.3",
       "react-native-web": "~0.13.12",
-      "styled-components": "^5.3.0"
+      "reflect-metadata": "^0.1.13",
+      "styled-components": "^5.3.0",
+      "tslib": "^2.2.0"
     },
     "devDependencies": {
       "@babel/core": "^7.9.0",
@@ -61,6 +65,7 @@ npm manifest:
       "@types/react-native": "~0.63.2",
       "@types/styled-components": "^5.1.9",
       "@types/styled-components-react-native": "^5.1.1",
+      "babel-plugin-transform-typescript-metadata": "^0.3.2",
       "typescript": "~4.0.0"
     },
     "private": true
@@ -1344,7 +1349,7 @@ Lockfile:
     dependencies:
       cross-spawn "^6.0.5"
   
-  "@expo/vector-icons@^12.0.4":
+  "@expo/vector-icons@^12.0.0", "@expo/vector-icons@^12.0.4":
     version "12.0.5"
     resolved "https://registry.yarnpkg.com/@expo/vector-icons/-/vector-icons-12.0.5.tgz#bc508ad05fb7e9a3e008704977cfec6c18aa7728"
     integrity sha512-zWvHBmkpbi1KrPma6Y+r/bsGI6MjbM1MBSe6W9A4uYMLhNI5NR4JtTnqxhf7g1XdpaDtBdv5aOWKEx4d5rxnhg==
@@ -2397,6 +2402,13 @@ Lockfile:
     version "7.0.0-beta.0"
     resolved "https://registry.yarnpkg.com/babel-plugin-syntax-trailing-function-commas/-/babel-plugin-syntax-trailing-function-commas-7.0.0-beta.0.tgz#aa213c1435e2bffeb6fca842287ef534ad05d5cf"
     integrity sha512-Xj9XuRuz3nTSbaTXWv3itLOcxyF4oPD8douBBmj7U9BBC6nEBYfyOJYQMf/8PJAFotC62UY5dFfIGEPr7WswzQ==
+  
+  babel-plugin-transform-typescript-metadata@^0.3.2:
+    version "0.3.2"
+    resolved "https://registry.yarnpkg.com/babel-plugin-transform-typescript-metadata/-/babel-plugin-transform-typescript-metadata-0.3.2.tgz#7a327842d8c36ffe07ee1b5276434e56c297c9b7"
+    integrity sha512-mWEvCQTgXQf48yDqgN7CH50waTyYBeP2Lpqx4nNWab9sxEpdXVeKgfj1qYI2/TgUPQtNFZ85i3PemRtnXVYYJg==
+    dependencies:
+      "@babel/helper-plugin-utils" "^7.0.0"
   
   babel-preset-expo@~8.3.0:
     version "8.3.0"
@@ -5726,6 +5738,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/react-native-shadow/-/react-native-shadow-1.2.2.tgz#08991cd14b71e32f2fc6363911c139d231949a66"
     integrity sha512-kwTmqRKmPEML9KbJi0uvvKd+67rOJQcr3IyNp9bg+qi/H+Wnwev/Mr8sUiUZlYEJ433ii2iNwpjc1ERMjHtMWw==
   
+  react-native-sqlite-storage@^5.0.0:
+    version "5.0.0"
+    resolved "https://registry.yarnpkg.com/react-native-sqlite-storage/-/react-native-sqlite-storage-5.0.0.tgz#fb015c928b59d3000360fb0774a99545e7a695d6"
+    integrity sha512-c1Joq3/tO1nmIcP8SkRZNolPSbfvY8uZg5lXse0TmjIPC0qHVbk96IMvWGyly1TmYCIpxpuDRc0/xCffDbYIvg==
+  
   react-native-svg-transformer@^0.14.3:
     version "0.14.3"
     resolved "https://registry.yarnpkg.com/react-native-svg-transformer/-/react-native-svg-transformer-0.14.3.tgz#43c8e176f5a11f16f39b87a64018e0ac090ffbdb"
@@ -5822,6 +5839,11 @@ Lockfile:
       safe-buffer "~5.1.1"
       string_decoder "~1.1.1"
       util-deprecate "~1.0.1"
+  
+  reflect-metadata@^0.1.13:
+    version "0.1.13"
+    resolved "https://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.13.tgz#67ae3ca57c972a2aa1642b10fe363fe32d49dc08"
+    integrity sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==
   
   regenerate-unicode-properties@^8.2.0:
     version "8.2.0"
@@ -6589,6 +6611,11 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
     integrity sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
+  
+  tslib@^2.2.0:
+    version "2.2.0"
+    resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.2.0.tgz#fb2c475977e35e241311ede2693cee1ec6698f5c"
+    integrity sha512-gS9GVHRU+RGn5KQM2rllAlR3dU6m7AcpJKdtH8gFvQiC4Otgk98XnmMU+nZenHt/+VhnBPWwgrJsyrdcw6i23w==
   
   type-fest@^0.3.1:
     version "0.3.1"

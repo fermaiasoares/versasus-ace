@@ -1,25 +1,33 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { KeyboardType, KeyboardTypeOptions, TextInputProps } from 'react-native';
-
+import React, { useEffect, useState } from 'react';
+import { KeyboardTypeOptions, TextInputProps } from 'react-native';
 import { Container, Icon, InputTexto } from './styles';
+
 interface IInputProps extends TextInputProps {
   name: string;
   hasError?: boolean;
-  tipo: "senha" | "texto" | "email" | "numero";
+  tipo: "senha" | "texto" | "email" | "numero" | undefined;
 }
 
-const Input: React.FC<IInputProps> = ({ tipo, ...rest }) => {
+const Input: React.FC<IInputProps> = ({ name, hasError, tipo, ...rest }) => {
   const [tipoTeclado, setTipoTeclado] = useState<KeyboardTypeOptions>();
 
   useEffect(() => {
-    if (tipo === "texto")
-      setTipoTeclado("default");
+    switch(tipo) {
+      case "texto" : setTipoTeclado("default");
+      break;
+      
+      case "email" : setTipoTeclado("email-address");
+      break;
 
-    if (tipo === "email")
-      setTipoTeclado("email-address");
+      case "numero" : setTipoTeclado("numeric");
+      break;
 
-    if (tipo === "numero")
-      setTipoTeclado("numeric");
+      case undefined : setTipoTeclado("default");
+      break;
+      
+      default: setTipoTeclado("default");
+      break;
+    }
   }, []);
 
   return (
