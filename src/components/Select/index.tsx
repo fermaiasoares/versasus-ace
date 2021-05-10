@@ -3,21 +3,24 @@ import { PickerItemProps, PickerProps } from 'react-native';
 
 import { Container, SelectIcon, SelectInput } from './styles';
 
+interface IItem extends PickerItemProps {
+  id: number;
+}
+
 interface ISelectProps extends PickerProps {
   name: string;
   icone?: string;
   placeholder?: string;
-  items?: PickerItemProps[];
+  items?: IItem[];
 }
 
 const Select: React.FC<ISelectProps> = ({icone, items, name, placeholder = "Selecione" }) => {
-  const [selecionado, setSelecionado] = useState("");
-  const [itemsSelect, setItemsSelect] = useState<PickerItemProps[]>();
+  const [selecionado, setSelecionado] = useState();
+  const [itemsSelect, setItemsSelect] = useState<IItem[]>();
 
   useEffect(() => {
     if(items) {
       setItemsSelect(items);
-      console.log(items);
     }
   }, [])
 
@@ -33,7 +36,7 @@ const Select: React.FC<ISelectProps> = ({icone, items, name, placeholder = "Sele
       >
         <SelectInput.Item label={placeholder} value="" color="#91919F"/>
         { 
-          items && items.map((item) => <SelectInput.Item label={item.label} value={item.value} />)
+          itemsSelect && itemsSelect.map((item) => <SelectInput.Item label={item.label} value={item.value} key={item.id}/>)
         }
       </SelectInput>
     </Container>

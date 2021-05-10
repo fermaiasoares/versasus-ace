@@ -1,5 +1,5 @@
-import React from 'react';
-import { PickerItemProps, View } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View } from 'react-native';
 
 import { BackgrounLogin, ButtonEntrar, ButtonEntrarTexto, ImageBackground } from './styles';
 
@@ -8,14 +8,26 @@ import VersaTec from '../../assets/versatec.svg';
 import Input from '../../components/Input';
 import Select from '../../components/Select';
 
-const LoginContainer = require('../../assets/login-background.png');
+import InstanciasService from '../../services/InstanciasService';
+const service = new InstanciasService();
+
+interface IItem {
+  id: number;
+  label: number;
+  value: number;
+}
 
 const Login: React.FC = () => {
+  const LoginContainer = require('../../assets/login-background.png');
   const background = require('../../assets/background.png');
-  const instancias: PickerItemProps[] = [
-    { label: 'Ambiente de Testes', value: "" },
-    { label: 'Caratinga', value: 'caratinga' }
-  ];
+
+  const [instancias, setInstancias] = useState<IItem[]>();
+
+  useEffect(() => {
+    service.execute().then(
+      response => setInstancias(response)
+    )    
+  }, [])
 
   return (
     <ImageBackground source={background}>
@@ -29,12 +41,14 @@ const Login: React.FC = () => {
 
       <BackgrounLogin source={LoginContainer}>
 
-        <Select
-          icone="filter"
-          name="ambientes"
-          placeholder="Escolha seu ambiente"
-          items={instancias}
-        />
+        { instancias && (
+          <Select
+            icone="filter"
+            name="ambientes"
+            placeholder="Escolha seu ambiente"
+            items={instancias}
+          />
+        )}
         
         <Input
           icone="user"

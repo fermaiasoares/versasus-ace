@@ -1,0 +1,19 @@
+{
+  "instancias": [
+    {
+      "id": 1,
+      "nome": "Ambiente de Teste",
+      "cidade": "versasus"
+    },
+    {
+      "id": 2,
+      "nome": "Caratinga",
+      "cidade": "caratinga"
+    },
+    {
+      "id": 3,
+      "nome": "Santa Bárbara do Leste",
+      "cidade": "sbleste"
+    }
+  ]
+}
