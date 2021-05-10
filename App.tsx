@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import 'reflect-metadata';
 import React from 'react';
 import { Text, View } from 'react-native';
@@ -7,9 +8,10 @@ import {
   DMSans_700Bold, useFonts
 } from '@expo-google-fonts/dm-sans';
 
-import Login from './src/pages/Login';
-
 import './src/database';
+import { NavigationContainer } from '@react-navigation/native';
+
+import AppRotas from './src/routes/AppRotas';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -26,5 +28,9 @@ export default function App() {
     )
   }
 
-  return <Login />;
+  return (
+    <NavigationContainer>
+      <AppRotas/>
+    </NavigationContainer>
+  );
 }

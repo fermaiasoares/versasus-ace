@@ -15,5 +15,13 @@
       "nome": "Santa Bárbara do Leste",
       "cidade": "sbleste"
     }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Samir",
+      "senha": "sdsgvfjhksdfbivssfdkhvgiuzskhsdbfsibh"
+    }
+    
   ]
 }
