@@ -15,7 +15,7 @@ interface ISelectProps extends PickerProps {
 }
 
 const Select: React.FC<ISelectProps> = ({icone, items, name, placeholder = "Selecione" }) => {
-  const [selecionado, setSelecionado] = useState();
+  const [selecionado, setSelecionado] = useState(null);
   const [itemsSelect, setItemsSelect] = useState<IItem[]>();
 
   useEffect(() => {
@@ -26,9 +26,9 @@ const Select: React.FC<ISelectProps> = ({icone, items, name, placeholder = "Sele
 
   return (
     <Container>
-      {icone && (
-        <SelectIcon name={icone} size={24} color="#0B75D7"/>
-        )
+      { icone && (
+          <SelectIcon name={icone} size={24} color="#0B75D7"/>
+          )
       }
       <SelectInput
         selectedValue={selecionado}

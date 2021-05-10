@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { View } from 'react-native';
 
-import { BackgrounLogin, ButtonEntrar, ButtonEntrarTexto, ImageBackground } from './styles';
+import {
+  BackgroundLogin, 
+  ButtonEntrar, 
+  ButtonEntrarTexto, 
+  ImageBackground
+} from './styles';
 
 import Logo from '../../assets/logo.svg';
 import VersaTec from '../../assets/versatec.svg';
+
 import Input from '../../components/Input';
 import Select from '../../components/Select';
 
@@ -13,8 +19,8 @@ const service = new InstanciasService();
 
 interface IItem {
   id: number;
-  label: number;
-  value: number;
+  label: string;
+  value: string;
 }
 
 const Login: React.FC = () => {
@@ -39,7 +45,7 @@ const Login: React.FC = () => {
         <Logo width={300} />
       </View>
 
-      <BackgrounLogin source={LoginContainer}>
+      <BackgroundLogin source={LoginContainer}>
 
         { instancias && (
           <Select
@@ -53,7 +59,7 @@ const Login: React.FC = () => {
         <Input
           icone="user"
           name="usuario"
-          tipo="numero"
+          tipo="texto"
           placeholder="Digite seu usuário"
         />
 
@@ -68,7 +74,7 @@ const Login: React.FC = () => {
             <ButtonEntrarTexto>Entrar</ButtonEntrarTexto>
           </ButtonEntrar>
           <VersaTec />
-        </BackgrounLogin>
+        </BackgroundLogin>
     </ImageBackground>
   );
 }

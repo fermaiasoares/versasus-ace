@@ -15,8 +15,9 @@ export const Container = styled.View`
   margin-bottom: 16px;
 `;
 
-export const InputText = styled.TextInput`
+export const TextInput = styled.TextInput`
   flex: 1;
+  font-size: 16px;
 `;
 
 export const Icon = styled(Feather)`

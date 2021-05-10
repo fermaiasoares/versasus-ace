@@ -15,11 +15,7 @@ export const ImageBackground = styled.ImageBackground`
   align-items: center;
 `;
 
-export const Input = styled.TextInput`
-  
-`
-
-export const BackgrounLogin = styled.ImageBackground`
+export const BackgroundLogin = styled.ImageBackground`
   width: 416px;
   height: 466px;
   border-top-left-radius: 30px;
